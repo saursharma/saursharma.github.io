@@ -8,11 +8,15 @@
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="js/appController.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
   </head>
   <body ng-controller="websiteCtrl">
     <md-toolbar md-scroll-shrink>
       <div class="md-toolbar-tools">
         <h2> {{name}} - My Personal Website</h2>
+        <md-button class="md-fab contact" aria-label="Comment">
+            <span class="contact-icon"> ? </span>
+        </md-button>
       </div>
     </md-toolbar>
     <br/>
@@ -21,4 +25,60 @@
       <center><q> {{quote}} </q> </center>
       </md-card>
     </md-content>
+    <div class="education-tabs">
+    <md-tabs class="md-accent" md-selected="data.selectedIndex">
+      <md-tab id="tab1" aria-controls="tab1-content">
+        Higher Education
+      </md-tab>
+      <md-tab id="tab2" aria-controls="tab2-content">
+        Schooling
+      </md-tab>
+      <md-tab id="tab3" aria-controls="tab3-content">
+        Certification
+      </md-tab>
+    </md-tabs>
+    <ng-switch on="data.selectedIndex" class="tabpanel-container">
+        <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()">
+            <md-card>
+			  <center> 
+				  <b> Management in Technology Management </b> <br/>
+				  Persuing <br/>
+				  DMS, IIT-Delhi
+			  </center>
+			</md-card>
+			<md-card>
+			  <center> 
+				  <b> B.Tech (CSE) </b> <br/>
+				  2012 Batch <br/>
+				  BVCOE (GGSIPU)
+			  </center>
+			</md-card>
+        </div>
+        <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="next()" md-swipe-right="previous()">
+            <md-card>
+			  <center> 
+				  <b> Senior Secondary </b> <br/>
+				  2008 <br/>
+				  SDAV (CBSE)
+			  </center>
+			</md-card>
+			<md-card>
+			  <center> 
+				  <b> Secondary </b> <br/>
+				  2006 <br/>
+				  SDAV (CBSE)
+			  </center>
+			</md-card>
+        </div>
+        <div role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2" md-swipe-left="next()" md-swipe-right="previous()">
+            <md-card>
+			  <center> 
+				  <b> Certification in Enterprise Management </b> <br/>
+				  2011 <br/>
+				  DMS, IIT-Delhi
+			  </center>
+			</md-card>
+        </div>
+    </ng-switch>
+    </div>
   </body>
