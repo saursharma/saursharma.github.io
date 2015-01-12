@@ -1,3 +1,29 @@
+.short-intro {
+  padding-left: 1em;
+}
+
+.name {
+  font-style: oblique;
+  font-weight: bolder;
+}
+
+.profile-image {
+  border-radius: 50%;
+  border: 2px solid rgb(0, 178, 255);
+}
+
+.short-bio {
+  font-size: small;
+  font-style: italic;
+  color: teal;
+}
+
+.short-details {
+  font-size: small;
+  font-style: italic;
+  color: cadetblue;
+}
+
 .education-tabs {
   margin: 0 1%;
 }

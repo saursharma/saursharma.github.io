@@ -22,11 +22,29 @@
     <br/>
 
     <md-content>
+    <div layout="row">
+      <div flex>
+        <md-card>
+        <div layout="row">
+          <div>
+            <img class="profile-image" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/p50x50/1966841_10205564593336771_1131066954403916535_n.jpg?oh=c70118b5f51cab09234e8bbb5adca581&oe=556AE6EB&__gda__=1433157485_3b5b5073e8ccfa441a8ea367ec019018">
+          </div>
+          <div flex class="short-intro">
+            <div class="name">{{name}} </div>
+            <div class="short-bio"> {{bio}} </div> 
+            <div class="short-details"> {{details}} </div>
+          </div>
+        </div>
+        </md-card>
+      </div>
     <!-- Quote content -->
+    <div flex>
     <md-card>
     <center><q> {{quote}} </q> </center>
     </md-card>
     <!-- End of quote -->
+    </div>
+  </div>
 
     <div layout="row">
     <!-- Education tab -->
@@ -90,56 +108,37 @@
 
     <!-- Professional tab -->
     <div flex class="professional-tabs">
-    <md-tabs class="md-accent" md-selected="data.selectedIndex">
+    <md-tabs class="md-accent" md-selected="profdata.selectedIndex">
       <md-tab id="prof-tab1" aria-controls="prof-tab1-content">
-        Higher Education
+        Career
       </md-tab>
       <md-tab id="prof-tab2" aria-controls="prof-tab2-content">
-        Schooling
-      </md-tab>
-      <md-tab id="prof-tab3" aria-controls="prof-tab3-content">
-        Certification
+        Experience
       </md-tab>
     </md-tabs>
-    <ng-switch on="data.selectedIndex" class="tabpanel-container">
+    <ng-switch on="profdata.selectedIndex" class="tabpanel-container">
       <div role="tabpanel" id="prof-tab1-content" aria-labelledby="prof-tab1" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()">
       <md-card>
 			  <center> 
-				  <b> Management in Technology Management </b> <br/>
-				  Persuing <br/>
-				  DMS, IIT-Delhi
-			  </center>
-			</md-card>
-			<md-card>
-			  <center> 
-				  <b> B.Tech (CSE) </b> <br/>
-				  2012 Batch <br/>
-				  BVCOE (GGSIPU)
+				  <b> Specialist - Tools Development </b> <br/>
+				  Google India (via Binary Semantics) <br/>
+			    August, 2012 to Present
 			  </center>
 			</md-card>
         </div>
         <div role="tabpanel" id="prof-tab2-content" aria-labelledby="prof-tab2" ng-switch-when="1" md-swipe-left="next()" md-swipe-right="previous()">
-            <md-card>
+        <md-card>
 			  <center> 
-				  <b> Senior Secondary </b> <br/>
-				  2008 <br/>
-				  SDAV (CBSE)
+				  <b> AngularJs </b> <br/>
+				  1+ year <br/>
+				  3 Projects
 			  </center>
 			</md-card>
 			<md-card>
 			  <center> 
-				  <b> Secondary </b> <br/>
-				  2006 <br/>
-				  SDAV (CBSE)
-			  </center>
-			</md-card>
-        </div>
-        <div role="tabpanel" id="prof-tab3-content" aria-labelledby="prof-tab3" ng-switch-when="2" md-swipe-left="next()" md-swipe-right="previous()">
-            <md-card>
-			  <center> 
-				  <b> Certification in Enterprise Management </b> <br/>
-				  2011 <br/>
-				  DMS, IIT-Delhi
+				  <b> PolymerJS </b> <br/>
+				  3+ months <br/>
+				  3 projects
 			  </center>
 			</md-card>
         </div>
