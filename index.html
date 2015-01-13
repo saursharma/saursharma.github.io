@@ -14,15 +14,12 @@
     <md-toolbar md-scroll-shrink>
       <div class="md-toolbar-tools">
         <h2> {{name}} - My Personal Website</h2>
-        <md-button class="md-fab contact" aria-label="Comment">
-            <span class="contact-icon"> ? </span>
-        </md-button>
       </div>
     </md-toolbar>
     <br/>
 
     <md-content>
-    <div layout="row">
+    <div layout="row" layout-sm="column">
       <div flex>
         <md-card>
         <div layout="row">
@@ -46,7 +43,7 @@
     </div>
   </div>
 
-    <div layout="row">
+    <div layout="row" layout-sm="column">
     <!-- Education tab -->
     <div flex class="education-tabs">
     <md-tabs class="md-accent" md-selected="data.selectedIndex">
