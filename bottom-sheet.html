@@ -1,0 +1,12 @@
+<md-bottom-sheet class="md-grid">
+  <md-list>
+    <md-item ng-repeat="item in social">
+     <md-button class="md-grid-item-content" aria-label="Dummy" ng-click="">
+        <div class="md-icon-container">
+          <img src="images/{{item.icon}}.png"></img>
+        </div>
+        <p class="md-grid-text"> {{item.website}}</p>
+      </md-button>
+    </md-item>
+  </md-list>
+</md-bottom-sheet>

@@ -12,8 +12,9 @@
   </head>
   <body ng-controller="websiteCtrl">
     <md-toolbar md-scroll-shrink>
-      <div class="md-toolbar-tools">
-        <h2> {{name}} - My Personal Website</h2>
+      <div class="md-toolbar-tools" layout="row">
+        <div flex> <h2> {{name}} - My Personal Website</h2> </div>
+        <div ng-click="showBottomSheet($event)"> <img src="images/ic_contacts_white_36dp.png"> </div>
       </div>
     </md-toolbar>
     <br/>
