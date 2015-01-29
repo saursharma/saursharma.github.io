@@ -7,6 +7,7 @@
     <script src="bower_components/hammerjs/hammer.min.js"></script>
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
     <script src="js/appController.js"></script>
     <link rel="stylesheet" type="text/css" href="css/app.css">
   </head>
@@ -19,10 +20,10 @@
     </md-toolbar>
     <br/>
 
-    <md-content>
+    <md-content style="background: rgb(255, 252, 0)">
     <div layout="row" layout-sm="column">
       <div flex>
-        <md-card>
+        <md-card class="custom-card">
         <div layout="row">
           <div>
             <img class="profile-image" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/p50x50/1966841_10205564593336771_1131066954403916535_n.jpg?oh=c70118b5f51cab09234e8bbb5adca581&oe=556AE6EB&__gda__=1433157485_3b5b5073e8ccfa441a8ea367ec019018">
@@ -37,7 +38,7 @@
       </div>
     <!-- Quote content -->
     <div flex>
-    <md-card>
+    <md-card class="custom-card">
     <center><q> {{quote}} </q> </center>
     </md-card>
     <!-- End of quote -->
@@ -60,14 +61,14 @@
     </md-tabs>
     <ng-switch on="data.selectedIndex" class="tabpanel-container">
         <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()">
-            <md-card>
+            <md-card class="custom-card">
 			  <center> 
 				  <b> Management in Technology Management </b> <br/>
 				  Persuing <br/>
 				  DMS, IIT-Delhi
 			  </center>
 			</md-card>
-			<md-card>
+			<md-card class="custom-card">>
 			  <center> 
 				  <b> B.Tech (CSE) </b> <br/>
 				  2012 Batch <br/>
@@ -76,14 +77,14 @@
 			</md-card>
         </div>
         <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="next()" md-swipe-right="previous()">
-            <md-card>
+            <md-card class="custom-card">>
 			  <center> 
 				  <b> Senior Secondary </b> <br/>
 				  2008 <br/>
 				  SDAV (CBSE)
 			  </center>
 			</md-card>
-			<md-card>
+			<md-card class="custom-card">>
 			  <center> 
 				  <b> Secondary </b> <br/>
 				  2006 <br/>
@@ -92,7 +93,7 @@
 			</md-card>
         </div>
         <div role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2" md-swipe-left="next()" md-swipe-right="previous()">
-            <md-card>
+            <md-card class="custom-card">>
 			  <center> 
 				  <b> Certification in Enterprise Management </b> <br/>
 				  2011 <br/>
@@ -116,7 +117,7 @@
     </md-tabs>
     <ng-switch on="profdata.selectedIndex" class="tabpanel-container">
       <div role="tabpanel" id="prof-tab1-content" aria-labelledby="prof-tab1" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()">
-      <md-card>
+      <md-card class="custom-card">
 			  <center> 
 				  <b> Specialist - Tools Development </b> <br/>
 				  Google India (via Binary Semantics) <br/>
@@ -125,14 +126,14 @@
 			</md-card>
         </div>
         <div role="tabpanel" id="prof-tab2-content" aria-labelledby="prof-tab2" ng-switch-when="1" md-swipe-left="next()" md-swipe-right="previous()">
-        <md-card>
+        <md-card class="custom-card">
 			  <center> 
 				  <b> AngularJs </b> <br/>
 				  1+ year <br/>
 				  3 Projects
 			  </center>
 			</md-card>
-			<md-card>
+			<md-card class="custom-card">
 			  <center> 
 				  <b> PolymerJS </b> <br/>
 				  3+ months <br/>
@@ -145,7 +146,7 @@
     <!-- End of prof tab -->
   </div>
 
-    <md-card> 
+    <md-card class="custom-card">> 
     <div layout="row"> 
       <div flex ng-repeat="skill in skills">
         <md-progress-circular md-mode="determinate" value="{{skill.counter}}"></md-progress-circular>

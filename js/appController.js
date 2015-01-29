@@ -1,4 +1,4 @@
-var websiteBuilder = angular.module('websiteBuilder',['ngMaterial']);
+var websiteBuilder = angular.module('websiteBuilder',['ngMaterial', 'ngRoute']);
 
 websiteBuilder.controller('websiteCtrl', function($scope, $interval, $mdBottomSheet) {
   $scope.name = 'Saurabh Sharma';  
@@ -52,4 +52,11 @@ websiteBuilder.controller('BottomSheetCtrl', function($scope) {
     profile: 'https://www.facebook.com/sharma.saurabh114',
     icon: 'facebook'
   }];
+});
+
+websiteBuilder.config(function($routeProvider) {
+  $routeProvider
+    .when('/blog', {
+          templateUrl: '/blog',
+    })
 });
